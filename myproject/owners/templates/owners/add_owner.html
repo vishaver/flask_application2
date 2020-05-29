@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} <br> {{ form.name(class="form-control form-control-lg",placeholder="OwnerName") }}
+    <br>
+    {{ form.puppy_id.label }} <br> {{ form.puppy_id(class="form-control form-control-lg",placeholder="Puppy Id") }}
+    <br>
+    <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+</form>
+</div>
+{% endblock %}

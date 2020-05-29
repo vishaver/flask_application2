@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} <br> {{ form.username(class="form-control form-control-lg",placeholder="Username") }}
+    <br>
+    {{ form.password.label }} <br> {{ form.password(class="form-control form-control-lg",placeholder="Password") }}
+    <br>
+    {{ form.pass_confirm.label }} <br> {{ form.pass_confirm(class="form-control form-control-lg",placeholder="Confirm Password") }}
+    <br>
+    <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+</form>
+</div>
+{% endblock %}
